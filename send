@@ -1,0 +1,17 @@
+#!/bin/bash
+# Author: @shadowelite
+# Date: 23-05-2022
+# https://github.com/shadowelite-sec
+
+cd /sdcard
+read -e -p 'Enter the directory name : ' DIR
+cd "$DIR" 2>/dev/null
+error=$(echo $?)
+
+if [[ "$error" == "1" ]]
+then
+	echo "Invalid Input"
+ 	cd && $(pwd)/send
+else
+	python3 -m http.server
+fi

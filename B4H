@@ -1,6 +1,7 @@
 #!/bin/bash
 # Author: @shadowelite
 # Date: 24-02-2022
+# Description: To find http url from base6
 # https://github.com/shadowelite-sec
 
 read -p "enter the base64 code :" code

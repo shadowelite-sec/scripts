@@ -1,6 +1,7 @@
 #!/bin/bash
 # Author: @shadowelite
 # Date: 23-05-2022
+# Description: To find http url from base64
 # https://github.com/shadowelite-sec
 
 cd /sdcard

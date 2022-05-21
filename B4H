@@ -1,0 +1,13 @@
+#!/bin/bash
+# Author: @shadowelite
+# Date: 24-02-2022
+# https://github.com/shadowelite-sec
+
+read -p "enter the base64 code :" code
+
+while [ "$code" != "$(echo $code | grep http)" ] 
+do
+	code=$(echo $code |base64 -d)
+	echo -e "$code\n"
+done
+echo -e "\n\n\033[0;31mthe result is : $code"

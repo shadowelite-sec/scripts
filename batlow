@@ -1,0 +1,18 @@
+#/bin/bash
+# Author: @shadowelite    
+# Date: 26-06-2022    
+# Description: To Notify Low Battery    
+# https://github.com/shadowelite-sec   
+
+BAT=$(cat /sys/class/power_supply/BAT1/capacity)
+
+if [[ "$BAT" < "16" ]]; then
+	notify-send -u critical -t 10000 "BATTERY IS LESS THAN 15%  " 
+elif [[ "$BAT" < "21" ]]; then
+	notify-send -u critical -t 10000 "BATTERY IS LESS THAN 20%  "
+elif [[ "$BAT" < "51" ]]; then                                                        
+        notify-send -u critical -t 10000 "BATTERY IS LESS THAN 50%  "
+	sleep 300
+fi
+sleep 300
+done

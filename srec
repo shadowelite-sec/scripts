@@ -1,0 +1,13 @@
+FPS="60"
+
+#notify 
+
+notify-send -t 3000 "recording starts in 5 sec"
+sleep 4
+
+#start record
+giph -g 1920x1080+0+0 -d 5 ~/screenshots/`date +%d_%m_%Y_%a_%I-%M-%S-%P`.mp4
+#ffmpeg -f x11grab -s 1920x1080 -i :0.0 -f pulse \
+#-i alsa_output.pci-0000_00_1f.3.analog-stereo.monitor ~/screenshots/`date +%d_%m_%Y_%a_%I-%M-%S-%P`.mp4
+
+notify-send "Recording Finished"
